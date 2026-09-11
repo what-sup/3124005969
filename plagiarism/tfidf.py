@@ -2,13 +2,12 @@
 
 import math
 from collections import Counter
-from typing import Dict, List, Sequence
+from collections.abc import Sequence
+
+Vector = dict[str, float]
 
 
-Vector = Dict[str, float]
-
-
-def build_tfidf_vectors(documents: Sequence[Sequence[str]]) -> List[Vector]:
+def build_tfidf_vectors(documents: Sequence[Sequence[str]]) -> list[Vector]:
     """Build one smoothed TF-IDF vector for each tokenized document."""
     document_counts = [Counter(document) for document in documents]
     document_total = len(document_counts)
@@ -25,7 +24,7 @@ def build_tfidf_vectors(documents: Sequence[Sequence[str]]) -> List[Vector]:
         for token, frequency in document_frequency.items()
     }
 
-    vectors: List[Vector] = []
+    vectors: list[Vector] = []
     for counts in document_counts:
         token_total = sum(counts.values())
         if token_total == 0:

@@ -2,10 +2,8 @@
 
 import logging
 import unicodedata
-from typing import List
 
 import jieba
-
 
 # The dependency may otherwise emit initialization messages on stderr.
 jieba.setLogLevel(logging.ERROR)
@@ -40,9 +38,9 @@ def _is_meaningful(token: str) -> bool:
     return any(character.isalnum() for character in token)
 
 
-def tokenize(text: str) -> List[str]:
+def tokenize(text: str) -> list[str]:
     """Normalize and segment text, omitting whitespace- and punctuation-only tokens."""
-    tokens: List[str] = []
+    tokens: list[str] = []
     for raw_token in _TOKENIZER.lcut(normalize_text(text), HMM=True):
         token = raw_token.strip().casefold()
         if token and _is_meaningful(token):

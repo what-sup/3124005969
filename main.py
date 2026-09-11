@@ -1,14 +1,13 @@
 """Command-line entry point for the plagiarism checker."""
 
 import sys
-from typing import Optional, Sequence
+from collections.abc import Sequence
 
 from plagiarism.errors import PlagiarismError
 from plagiarism.file_io import read_text, write_score
 from plagiarism.similarity import cosine_similarity
 from plagiarism.text_processor import tokenize
 from plagiarism.tfidf import build_tfidf_vectors
-
 
 _USAGE = "用法: python main.py <原文路径> <抄袭版路径> <答案路径>"
 
@@ -23,7 +22,7 @@ def calculate_similarity(original_path: str, plagiarized_path: str) -> float:
     return cosine_similarity(original_vector, plagiarized_vector)
 
 
-def main(argv: Optional[Sequence[str]] = None) -> int:
+def main(argv: Sequence[str] | None = None) -> int:
     """Run the CLI and return a process exit code."""
     arguments = list(sys.argv[1:] if argv is None else argv)
     if len(arguments) != 3:

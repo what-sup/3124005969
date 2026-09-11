@@ -1,12 +1,10 @@
 """Input and output helpers for the command-line program."""
 
 from pathlib import Path
-from typing import Union
 
 from .errors import InputFileError, OutputFileError, TextDecodeError
 
-
-PathValue = Union[str, Path]
+PathValue = str | Path
 _SUPPORTED_ENCODINGS = ("utf-8", "gb18030")
 
 

@@ -4,10 +4,9 @@ This test is intentionally written before main.py.  It should fail until
 there is a working implementation of the required three-path interface.
 """
 
-from pathlib import Path
 import subprocess
 import sys
-
+from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 

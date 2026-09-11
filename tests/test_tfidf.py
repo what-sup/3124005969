@@ -39,6 +39,10 @@ def test_build_tfidf_vectors_represents_empty_document_as_empty_mapping() -> Non
     assert vectors[1]["only"] > 0
 
 
+def test_build_tfidf_vectors_returns_empty_for_empty_collection() -> None:
+    assert build_tfidf_vectors([]) == []
+
+
 def test_build_tfidf_vectors_returns_one_vector_per_document() -> None:
     documents = [["a"], [], ["b", "c"]]
 

@@ -1,10 +1,9 @@
-from pathlib import Path
 import os
 import subprocess
 import sys
+from pathlib import Path
 
 from plagiarism.text_processor import normalize_text, tokenize
-
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 
