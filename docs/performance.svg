@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="650" viewBox="0 0 820 650" role="img" aria-labelledby="title desc">
+  <title id="title">Plagiarism checker performance measurements</title>
+  <desc id="desc">Bar charts compare old and optimized token filtering time, and cumulative profiling time for the dominant functions.</desc>
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #1f2937; }
+    .title { font-size: 22px; font-weight: 700; }
+    .subtitle { font-size: 14px; fill: #4b5563; }
+    .label { font-size: 13px; }
+    .value { font-size: 13px; font-weight: 600; }
+    .axis { stroke: #9ca3af; stroke-width: 1; }
+    .grid { stroke: #e5e7eb; stroke-width: 1; }
+    .old { fill: #94a3b8; }
+    .new { fill: #2563eb; }
+    .profile { fill: #0f766e; }
+  </style>
+  <rect width="820" height="650" fill="#ffffff"/>
+  <text x="40" y="42" class="title">论文查重性能分析</text>
+  <text x="40" y="67" class="subtitle">官方纯文本样例；数值越低表示耗时越少</text>
+
+  <text x="40" y="112" class="title" style="font-size:17px">Token 过滤优化（平均耗时）</text>
+  <line x1="190" y1="300" x2="760" y2="300" class="axis"/>
+  <line x1="190" y1="145" x2="190" y2="300" class="axis"/>
+  <line x1="190" y1="248" x2="760" y2="248" class="grid"/>
+  <line x1="190" y1="197" x2="760" y2="197" class="grid"/>
+  <line x1="190" y1="145" x2="760" y2="145" class="grid"/>
+  <text x="176" y="304" class="label" text-anchor="end">0</text>
+  <text x="176" y="252" class="label" text-anchor="end">15 ms</text>
+  <text x="176" y="201" class="label" text-anchor="end">30 ms</text>
+  <text x="176" y="149" class="label" text-anchor="end">45 ms</text>
+  <rect x="300" y="176.7" width="120" height="123.3" rx="4" class="old"/>
+  <rect x="540" y="180.0" width="120" height="120.0" rx="4" class="new"/>
+  <text x="360" y="168" class="value" text-anchor="middle">35.635 ms</text>
+  <text x="600" y="172" class="value" text-anchor="middle">34.591 ms</text>
+  <text x="360" y="325" class="label" text-anchor="middle">旧实现</text>
+  <text x="600" y="325" class="label" text-anchor="middle">新实现</text>
+  <text x="480" y="355" class="subtitle" text-anchor="middle">变化：−2.93%</text>
+
+  <text x="40" y="405" class="title" style="font-size:17px">cProfile 累计耗时（秒）</text>
+  <line x1="250" y1="590" x2="760" y2="590" class="axis"/>
+  <line x1="250" y1="445" x2="250" y2="590" class="axis"/>
+  <line x1="250" y1="518" x2="760" y2="518" class="grid"/>
+  <line x1="250" y1="445" x2="760" y2="445" class="grid"/>
+  <text x="236" y="594" class="label" text-anchor="end">0</text>
+  <text x="236" y="522" class="label" text-anchor="end">0.3</text>
+  <text x="236" y="449" class="label" text-anchor="end">0.6</text>
+  <rect x="295" y="447.9" width="90" height="142.1" rx="4" class="profile"/>
+  <rect x="450" y="450.9" width="90" height="139.1" rx="4" class="profile"/>
+  <rect x="605" y="471.7" width="90" height="118.3" rx="4" class="profile"/>
+  <text x="340" y="440" class="value" text-anchor="middle">0.588</text>
+  <text x="495" y="443" class="value" text-anchor="middle">0.576</text>
+  <text x="650" y="464" class="value" text-anchor="middle">0.489</text>
+  <text x="340" y="610" class="label" text-anchor="middle">tokenize</text>
+  <text x="495" y="610" class="label" text-anchor="middle">jieba.lcut</text>
+  <text x="650" y="610" class="label" text-anchor="middle">词典初始化</text>
+</svg>

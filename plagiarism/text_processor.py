@@ -35,7 +35,7 @@ def normalize_text(text: str) -> str:
 
 def _is_meaningful(token: str) -> bool:
     """Return whether a token contains at least one letter, digit, or CJK character."""
-    return any(character.isalnum() for character in token)
+    return any(map(str.isalnum, token))
 
 
 def tokenize(text: str) -> list[str]:
