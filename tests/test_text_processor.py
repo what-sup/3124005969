@@ -7,6 +7,7 @@ from plagiarism.text_processor import normalize_text, tokenize
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 
+
 def test_normalize_text_unifies_newlines_and_width() -> None:
     assert normalize_text("Ａ\r\nＢ\rＣ") == "A\nB\nC"
 

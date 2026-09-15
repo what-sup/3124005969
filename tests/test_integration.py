@@ -5,9 +5,17 @@ from pathlib import Path
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 
 
-def run_main(original: Path, plagiarized: Path, answer: Path) -> subprocess.CompletedProcess[str]:
+def run_main(
+    original: Path, plagiarized: Path, answer: Path
+) -> subprocess.CompletedProcess[str]:
     return subprocess.run(
-        [sys.executable, str(PROJECT_ROOT / "main.py"), str(original), str(plagiarized), str(answer)],
+        [
+            sys.executable,
+            str(PROJECT_ROOT / "main.py"),
+            str(original),
+            str(plagiarized),
+            str(answer),
+        ],
         cwd=PROJECT_ROOT,
         capture_output=True,
         text=True,
@@ -30,7 +38,9 @@ def test_empty_documents_produce_zero_score_and_quiet_success(tmp_path: Path) ->
     assert answer.read_text(encoding="utf-8") == "0.00\n"
 
 
-def test_punctuation_and_whitespace_do_not_change_same_text_score(tmp_path: Path) -> None:
+def test_punctuation_and_whitespace_do_not_change_same_text_score(
+    tmp_path: Path,
+) -> None:
     original = tmp_path / "original.txt"
     plagiarized = tmp_path / "plagiarized.txt"
     answer = tmp_path / "answer.txt"

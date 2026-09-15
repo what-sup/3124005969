@@ -25,7 +25,9 @@ def test_main_function_returns_usage_code_for_wrong_arguments(capsys) -> None:
     assert captured.out == ""
 
 
-def test_main_function_returns_error_code_for_missing_input(tmp_path: Path, capsys) -> None:
+def test_main_function_returns_error_code_for_missing_input(
+    tmp_path: Path, capsys
+) -> None:
     answer = tmp_path / "answer.txt"
 
     exit_code = main(

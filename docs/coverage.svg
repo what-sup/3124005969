@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="560" viewBox="0 0 820 560" role="img" aria-labelledby="title desc">
+  <title id="title">Test coverage report</title>
+  <desc id="desc">Overall statement coverage is 97 percent. Individual modules range from 89 to 100 percent.</desc>
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #1f2937; }
+    .title { font-size: 22px; font-weight: 700; }
+    .subtitle { font-size: 14px; fill: #4b5563; }
+    .label { font-size: 13px; }
+    .value { font-size: 13px; font-weight: 600; }
+    .axis { stroke: #9ca3af; stroke-width: 1; }
+    .grid { stroke: #e5e7eb; stroke-width: 1; }
+    .bar { fill: #2563eb; }
+    .total { fill: #0f766e; }
+  </style>
+  <rect width="820" height="560" fill="#ffffff"/>
+  <text x="40" y="42" class="title">测试覆盖率</text>
+  <text x="40" y="68" class="subtitle">34 个测试用例；语句总覆盖率 97%</text>
+
+  <line x1="235" y1="495" x2="760" y2="495" class="axis"/>
+  <line x1="235" y1="115" x2="235" y2="495" class="axis"/>
+  <line x1="235" y1="400" x2="760" y2="400" class="grid"/>
+  <line x1="235" y1="305" x2="760" y2="305" class="grid"/>
+  <line x1="235" y1="210" x2="760" y2="210" class="grid"/>
+  <line x1="235" y1="115" x2="760" y2="115" class="grid"/>
+  <text x="221" y="499" class="label" text-anchor="end">0%</text>
+  <text x="221" y="404" class="label" text-anchor="end">25%</text>
+  <text x="221" y="309" class="label" text-anchor="end">50%</text>
+  <text x="221" y="214" class="label" text-anchor="end">75%</text>
+  <text x="221" y="119" class="label" text-anchor="end">100%</text>
+
+  <text x="225" y="142" class="label" text-anchor="end">main.py</text>
+  <rect x="250" y="130.2" width="55" height="364.8" rx="3" class="bar"/>
+  <text x="277" y="122" class="value" text-anchor="middle">96%</text>
+
+  <text x="225" y="190" class="label" text-anchor="end">errors.py</text>
+  <rect x="320" y="115" width="55" height="380" rx="3" class="bar"/>
+  <text x="347" y="107" class="value" text-anchor="middle">100%</text>
+
+  <text x="225" y="238" class="label" text-anchor="end">file_io.py</text>
+  <rect x="390" y="115" width="55" height="380" rx="3" class="bar"/>
+  <text x="417" y="107" class="value" text-anchor="middle">100%</text>
+
+  <text x="225" y="286" class="label" text-anchor="end">similarity.py</text>
+  <rect x="460" y="115" width="55" height="380" rx="3" class="bar"/>
+  <text x="487" y="107" class="value" text-anchor="middle">100%</text>
+
+  <text x="225" y="334" class="label" text-anchor="end">text_processor.py</text>
+  <rect x="530" y="156.8" width="55" height="338.2" rx="3" class="bar"/>
+  <text x="557" y="149" class="value" text-anchor="middle">89%</text>
+
+  <text x="225" y="382" class="label" text-anchor="end">tfidf.py</text>
+  <rect x="600" y="115" width="55" height="380" rx="3" class="bar"/>
+  <text x="627" y="107" class="value" text-anchor="middle">100%</text>
+
+  <text x="225" y="430" class="label" text-anchor="end">总计</text>
+  <rect x="670" y="126.4" width="55" height="368.6" rx="3" class="total"/>
+  <text x="697" y="118" class="value" text-anchor="middle">97%</text>
+</svg>

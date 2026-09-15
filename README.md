@@ -18,17 +18,26 @@ python main.py <原文绝对路径> <抄袭版绝对路径> <答案文件绝对�
 
 答案文件输出一个保留两位小数的浮点数。
 
-## 安装依赖
+## 安装运行依赖
+
+项目需要 Python 3.10+。运行程序前安装运行时依赖：
 
 ```bash
 python -m pip install -r requirements.txt
 ```
 
-## 运行测试
+## 安装开发依赖和运行测试
 
 ```bash
+python -m pip install -r requirements-dev.txt
 python -m pytest tests/ -q
 ```
+
+测试和性能材料：
+
+- [测试与覆盖率报告](docs/test-report.md)；
+- [性能分析与改进记录](docs/performance.md)；
+- [覆盖率图](docs/coverage.svg)；
 
 ## 项目结构
 
@@ -43,9 +52,15 @@ python -m pytest tests/ -q
 ├── tests/
 ├── docs/
 │   ├── PSP.md
-│   └── design.md
+│   ├── design.md
+│   ├── performance.md
+│   ├── performance.svg
+│   ├── test-report.md
+│   └── coverage.svg
 ├── README.md
-└── requirements.txt
+├── pytest.ini
+├── requirements.txt
+└── requirements-dev.txt
 ```
 
 ## 约束

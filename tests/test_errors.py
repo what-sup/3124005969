@@ -9,7 +9,11 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 
 def run_main(*arguments: Path | str) -> subprocess.CompletedProcess[str]:
     return subprocess.run(
-        [sys.executable, str(PROJECT_ROOT / "main.py"), *(str(arg) for arg in arguments)],
+        [
+            sys.executable,
+            str(PROJECT_ROOT / "main.py"),
+            *(str(arg) for arg in arguments),
+        ],
         cwd=PROJECT_ROOT,
         capture_output=True,
         text=True,
