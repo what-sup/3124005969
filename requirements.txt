@@ -1,1 +1,7 @@
+<<<<<<< HEAD
 jieba>=0.42.1,<1.0
+=======
+mcp>=1.2.0
+openai>=1.30.0
+python-dotenv>=1.0.0
+>>>>>>> 9c14ceb (feat: MCP智能待办项目核心代码)

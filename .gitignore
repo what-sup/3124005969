@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 __pycache__/
 *.py[cod]
 .pytest_cache/
@@ -8,3 +9,28 @@ htmlcov/
 *.pstats
 .venv/
 .DS_Store
+=======
+# 虚拟环境
+venv/
+.venv/
+
+# 环境变量（千万别把包含 API Key 的 .env 传上去！）
+.env
+
+# Python 编译缓存
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# 运行数据（如果你不希望别人看到你本地的测试数据，把下面这行也加上）
+data/todos.json
+
+# 编辑器配置
+.vscode/
+.idea/
+
+# 操作系统文件
+.DS_Store
+Thumbs.db
+>>>>>>> 9c14ceb (feat: MCP智能待办项目核心代码)
